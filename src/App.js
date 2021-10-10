@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Expenses from './components/ExpenseList/Expenses';
+import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
 const INIT_EXP = [

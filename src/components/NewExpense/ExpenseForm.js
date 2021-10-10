@@ -7,7 +7,6 @@ const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('')
     const [enteredAmount, setEnteredAmount] = useState('')
     const [enteredDate, setEnteredDate] = useState('')
-    const [formOpen, setFormOpen] = useState(false)
 
     // const [userInput, setUserInput] = useState({
     //     enteredTitle: '',
@@ -19,7 +18,7 @@ const ExpenseForm = (props) => {
         event.preventDefault();
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         };
         
