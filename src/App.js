@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 
+// Import children components
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
+// Initial demo expenses data
 const INIT_EXP = [
   {
     id: 'e1',
@@ -10,10 +12,12 @@ const INIT_EXP = [
     amount: 94.12,
     date: new Date(2020, 7, 14),
   },
-  { id: 'e2', 
-    title: 'New TV', 
-    amount: 799.49, 
-    date: new Date(2021, 2, 12) },
+  {
+    id: 'e2',
+    title: 'New TV',
+    amount: 799.49,
+    date: new Date(2021, 2, 12)
+  },
   {
     id: 'e3',
     title: 'Car Insurance',
@@ -30,20 +34,26 @@ const INIT_EXP = [
 
 function App() {
 
+  /*
+    useState is a Hook that allows you to have state variables in functional components.
+    You pass the initial state to this function and it returns a variable with the current 
+    state value (not necessarily the initial state) and another function to update this value.
+  */
   const [expenses, setExpenses] = useState(INIT_EXP)
 
+  // Appends newly added expense to the expenses state variable
   const addExpenseHandler = (expenseData) => {
     setExpenses((prevExpenses) => {
-      return[
+      return [
         expenseData, ...prevExpenses
       ]
     })
   }
-  
+
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler}/>
-      <Expenses expenses={expenses}/>
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses expenses={expenses} />
     </div>
   );
 }
