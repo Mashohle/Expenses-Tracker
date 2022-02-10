@@ -77,7 +77,7 @@ _Below is the step by step guide to set up the project._
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Mashohle/Redux-Cart.git
+   git clone https://github.com/Mashohle/Expenses-Tracker.git
    ```
 
 2. Install dependencies
